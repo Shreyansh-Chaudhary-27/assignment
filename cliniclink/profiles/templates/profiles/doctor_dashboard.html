@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor_Dashboard</title>
+</head>
+
+<body>
+    <a href="{% url 'logout' %}">Logout</a>
+    <h2>Doctor Dashboard</h2>
+    <p>Welcome, {{ request.user.first_name }}</p>
+    <p>Email: {{ request.user.email }}</p>
+    <img src="{{ profile.profile_picture.url }}" alt="Profile Picture" width="200">
+    <p>Address: {{ profile.address_line1 }}, {{ profile.city }}, {{ profile.state }}, {{ profile.pincode }}</p>
+
+
+</body>
+
+</html>
